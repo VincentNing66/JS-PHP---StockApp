@@ -1,0 +1,60 @@
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Stack Tracker</title>
+	<!-- link to the css file -->
+	<link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+</head>
+
+<!-- onload some onclick and onchange funtions for buttons  -->
+<body onload="init()">
+
+	<!-- title -->
+	<div>
+		<h1 class='text title'>Stock Tracker</h1>
+	</div>
+
+	<hr>
+
+	<!-- login function -->
+	<div id="login">
+		<h2 class="text">Please login in ...</h2>
+		<form name='form-login'>
+			<input type="text" id="user" placeholder="Username"> 
+			<input type="password" id="pass" placeholder="Password">
+			<input type="button" id="submitbtn" onclick="checkLogin()" value="Login">
+		</form>
+	</div>
+
+	<!-- Content that will be shown after a successful login -->
+	<div id="afterLogin">
+		<h2 id="welcome" class="text">WELCOME MESSAGE</h2>
+		<input type="button" id="logoutbtn" onclick="handleLogout()" value="Logout">
+
+		<!-- main two div to dispaly the information that is retrieved from the database -->
+		<div id="product_form">
+			<div id="adding">
+				<select id="stockList"></select>
+				<button id="addStock">Add</button>
+			</div>
+			<div id="stock_list" >
+
+				<!-- The reason that why I put them into another div is that for the perpose to hide the vertical scrollbar purpose -->
+				<div class="bloc">
+					<select id="userStock" size="10"></select>
+				</div>
+				<div class="bloc">
+					<select id="details" size="10"></select>
+				</div>
+			</div>
+			<div id="botombtnset">
+				<button id="removeStock">Remove</button>
+				<button id="Unselect">Unselect</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- link to the javscript file -->
+<script src="script.js" ></script>
